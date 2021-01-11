@@ -1,32 +1,51 @@
-@import '../../styles/variables.css';
-
+@import "../../styles/variables.css";
+@import "../../styles/breakpoint";
 .Input {
   margin-bottom: 0.5em;
   font-size: 1rem;
   outline: none;
+  font-family: "Raleway", sans-serif;
 
+  @include md {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+  }
   label {
-    font-size: .75em;
+    font-size: 0.8em;
     outline: none;
     display: block;
+    outline: none;
+    @include md {
+    width: 9em;}
   }
   input {
     height: 2em;
     padding: 0.25em 0.4em;
     border-radius: 3px;
     border: 1px solid var(--light-grey);
-    font-family: inherit;
     font-size: 1em;
-    margin-top: 0.5em;
+
     width: 100%;
     &:active,
     &:focus {
       border-color: var(--grey);
       outline: none;
     }
+    &.isError {
+      border-color: red;
+    }
+    @include md {
+      width: 21.875em;
+    }
   }
   span {
-    color: var(--danger);
-    font-size: .85em;
+    color: red;
+    font-size: 0.65em;
   }
+}
+::placeholder,
+::-webkit-input-placeholder {
+  color: #b9bcc9;
+  font-size: 0.75em;
 }

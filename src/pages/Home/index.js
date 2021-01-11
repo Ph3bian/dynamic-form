@@ -3,34 +3,23 @@ import styles from "./home.module.scss";
 import data from "./data.js";
 import { UserReducer, DefaultUser } from "./user-reducer";
 import { Input, Button, Select, Layout } from "components";
+import { fetchData, handleSubmit, handleChange } from "./functions";
 const Home = () => {
   const [questions, setQuestions] = useState([]);
   const [user, setUser] = useReducer(UserReducer, DefaultUser);
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
-    fetchData();
+    fetchData(setQuestions, data);
   }, []);
 
-  const fetchData = () => {
-    setQuestions(data?.questions || []);
-  };
-
-  const handleChange = ({ target }) => {
-    setUser({
-      type: "UPDATE_INFO",
-      payload: { [target.name]: target.value },
-    });
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(
-      `firstName: ${user.first_name},\nlastName:${user.last_name},\ncountry:${user.country},\nemail:${user.email},\nphoneNumber: "555-123-1111",\npostCode: "V6B 1S5",\nstreetAddress: "123 Evergreen Drive"`
-    );
-  };
   return (
     <Layout>
       <div className={styles.Home}>
-        <form onSubmit={handleSubmit} className={styles.Form}>
+        <form
+          onSubmit={(e) => handleSubmit(e, user, setErrors)}
+          className={styles.Form}
+        >
           {questions &&
             questions.length > 0 &&
             questions.map(({ title = "", fields = [] }, id) => (
@@ -44,7 +33,8 @@ const Home = () => {
                         key={name}
                         name={name}
                         options={options}
-                        onChange={(e) => handleChange(e)}
+                        onChange={(e) => handleChange(e, setUser)}
+                        error={errors[name]}
                       />
                     ) : (
                       <Input
@@ -52,8 +42,9 @@ const Home = () => {
                         key={name}
                         name={name}
                         value={user[name]}
-                        onChange={(e) => handleChange(e)}
+                        onChange={(e) => handleChange(e, setUser)}
                         type={type}
+                        error={errors[name]}
                         placeholder={`Enter ${label.toLowerCase()}`}
                       />
                     )
@@ -61,7 +52,7 @@ const Home = () => {
                 </div>
               </div>
             ))}
-          <Button type="submit" />
+          <Button type="submit" text="Submit" />
         </form>
       </div>
     </Layout>

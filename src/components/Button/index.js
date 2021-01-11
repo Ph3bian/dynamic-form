@@ -1,9 +1,14 @@
-import React from 'react'
-import styles from './module.scss'
+import React from "react";
+import styles from "./module.scss";
 
-const Button = ({ type, children,  onClick }) => (
-  <button type={type} onClick={onClick} className={styles.Button}>
-    {children}
+const Button = ({ type, children, text, onClick, variant, ...rest }) => (
+  <button
+    type={type || "button"}
+    onClick={onClick}
+    className={[styles.Button, styles[variant]].join(" ")}
+    {...rest}
+  >
+    {text || children}
   </button>
-)
-export default Button
+);
+export default Button;

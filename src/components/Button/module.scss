@@ -6,9 +6,25 @@ Button {
   transition: all 0.2s;
   touch-action: manipulation;
   position: relative;
-  padding: 1em 0.8em;
+  padding: 0.5em 0.5em;
   line-height: 1.28rem;
-  color: white;
+  color: var(--light);
   border-radius: 3px;
   background: var(--primary-color);
+  border: none;
+  &:hover,
+  &:active {
+    color: var(--light);
+    background-color: transparentize(var(--primary-color), 0.1);
+  }
+  &.neutral {
+    border: var(--light-grey) 1px solid;
+    background-color: var(--light-grey);
+    color: var(--primary-color);
+  }
+  &.primary {
+    border: var(--primary-color) 1px solid;
+    background-color: var(--primary-color);
+    color: var(--light);
+  }
 }

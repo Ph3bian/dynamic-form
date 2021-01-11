@@ -1,12 +1,12 @@
 @import "./variables.css";
-@import 'breakpoint';
-@import 'normalize';
-@import 'typography';
+@import "breakpoint";
+@import "normalize";
+@import "typography";
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
- 
+  font-family: "Raleway", sans-serif;
   @include md {
     font-size: 75%;
   }
@@ -25,16 +25,15 @@ html {
 }
 
 body {
-  font-family: Jost;
+  font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   font-style: normal;
   font-weight: 300;
   max-width: 2560px;
-  margin: 0 auto;
+  margin: -8px;
   color: #223856;
-  background: $white;
 }
 
 *,
@@ -45,13 +44,13 @@ body {
   box-sizing: inherit;
   font-style: inherit;
   font-weight: inherit;
-  font-family: Jost;
+  font-family: "Raleway", sans-serif;
   color: inherit;
 }
 
 button {
   cursor: pointer;
-
+  font-family: "Raleway", sans-serif;
   &:focus,
   &:visited,
   &:active {
@@ -71,6 +70,4 @@ a {
   }
 }
 
-h1 {
-  margin: 0;
-}
+

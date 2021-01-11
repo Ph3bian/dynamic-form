@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The <Input /> component Should render input correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="Input"
+  >
+    <label>
+      First Name
+    </label>
+    <input
+      name="firstName"
+      placeholder="Enter first name"
+      type="text"
+    />
+  </div>
+</DocumentFragment>
+`;

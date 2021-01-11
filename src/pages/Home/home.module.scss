@@ -1,11 +1,19 @@
 .Home {
-    padding: 2em 4em;
+  padding: 2em 3em;
+  font-family: "Raleway", sans-serif;
   .Form {
+    &Row {
+      margin-bottom: 3em;
+      &> div{
+        margin-bottom: .5em;
+      }
+    }
+    button{
+        margin-top: 2em;
+    }
+    h2{
+      text-transform: capitalize;
+    }
   }
-//   .isTwo {
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     grid-template-rows: 100%;
-//     column-gap: 1em;
-//   }
+
 }
