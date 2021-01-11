@@ -1,0 +1,38 @@
+@import "../../styles/breakpoint";
+@import "../../styles/variables.css";
+.Layout {
+  display: block;
+  height: 100%;
+  width: 100%;
+  @include md {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    align-items: center;
+    height: 100vh;
+    overflow-y: hidden;
+    font-size: 1rem;
+  }
+  &Content {
+    padding: 4em 3em;
+    background: var(--light);
+    height: 100%;
+    @include sm {
+      padding: 0;
+    }
+  }
+  &Bg {
+    background-color: var(--primary-color);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    svg {
+      width: 30em;
+    }
+    @include sm {
+      display: none;
+    }
+  }
+}

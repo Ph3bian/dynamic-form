@@ -1,0 +1,32 @@
+@import '../../styles/variables.css';
+
+.Input {
+  margin-bottom: 0.5em;
+  font-size: 1rem;
+  outline: none;
+
+  label {
+    font-size: .75em;
+    outline: none;
+    display: block;
+  }
+  input {
+    height: 2em;
+    padding: 0.25em 0.4em;
+    border-radius: 3px;
+    border: 1px solid var(--light-grey);
+    font-family: inherit;
+    font-size: 1em;
+    margin-top: 0.5em;
+    width: 100%;
+    &:active,
+    &:focus {
+      border-color: var(--grey);
+      outline: none;
+    }
+  }
+  span {
+    color: var(--danger);
+    font-size: .85em;
+  }
+}
