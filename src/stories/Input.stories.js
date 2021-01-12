@@ -6,13 +6,12 @@ export default {
   component: Input,
 };
 
-const Template = (args) => <Input {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  label: "First Name",
-  type: "text",
-  name: "first_name",
-  onChange: ()=>null,
-  placeholder: "Enter first name",
-};
+export const DefaultInput = () => (
+  <Input
+    label="First Name"
+    type="text"
+    name="first_name"
+    onChange={() => null}
+    placeholder="Enter first name"
+  />
+);
