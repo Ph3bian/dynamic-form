@@ -15,7 +15,11 @@ export const UserReducer = (user, { type, payload }) => {
         ...user,
         ...payload,
       };
-
+      case "RESET_INFO":
+        return {
+          ...user,
+          ...DefaultUser,
+        };
     default:
       return user;
   }

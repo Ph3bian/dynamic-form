@@ -1,5 +1,5 @@
 import { toaster } from "evergreen-ui";
-export const handleSubmit = (e, user, setErrors) => {
+export const handleSubmit = (e, user, setErrors, setUser, DefaultUser) => {
   e.preventDefault();
   const errors = isValid(user);
   setErrors(errors);
@@ -19,7 +19,10 @@ export const handleSubmit = (e, user, setErrors) => {
   console.log(
     `firstName: ${first_name},\nlastName:${last_name},\ncountry:${country},\nemail:${email},\nphoneNumber: ${phone_number},\npostCode:${post_code},\nstreetAddress: ${street_address}`
   );
-  toaster.success("Details Saved!");
+  toaster.success("Details logged in console!");
+  setUser({
+    type: "RESET_INFO",
+  });
 };
 
 export const handleChange = ({ target }, setUser) => {
@@ -29,7 +32,8 @@ export const handleChange = ({ target }, setUser) => {
   });
 };
 
-export const fetchData = (setQuestions, data) => {
+export const fetchData = (setQuestions, data, setLoading) => {
+  setLoading(false)
   setQuestions(data?.questions || []);
 };
 

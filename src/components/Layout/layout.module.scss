@@ -20,6 +20,9 @@
     background: var(--light);
     height: 100%;
     margin: -8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @include sm {
       padding: 0;
     }

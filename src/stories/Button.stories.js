@@ -2,8 +2,9 @@ import React from "react";
 import { Button } from "components";
 
 export default {
-  title: "Example/Button",
+  title: "Button",
   component: Button,
+
  
 };
 

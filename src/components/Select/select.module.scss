@@ -17,18 +17,24 @@
     }
   }
   select {
-    height: 2.625em;
+    height: 2.5em;
     padding: 0.25em 0.4em;
-    border-radius: 3px;
+    border-radius: 5px;
     border: 1px solid var(--light-grey);
     font-family: inherit;
     margin-top: 0.5em;
     width: 100%;
-    
+    width: -webkit-fill-available;
+    margin: auto;
+    margin-top: 0.5em;
     &:active,
     &:focus {
-      border-color: var(--grey);
+      border-color: var(--primary-color);
       outline: none;
+    }
+    &[class="error"] {
+      border-color: var(--danger);
+    
     }
   }
   span {

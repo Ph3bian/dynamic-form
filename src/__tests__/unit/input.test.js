@@ -1,7 +1,7 @@
 import React from "react";
 import { axe, toHaveNoViolations } from "jest-axe";
 import { render, fireEvent } from "@testing-library/react";
-import { Input } from "../../components";
+import { Input } from "../components";
 
 describe("The <Input /> component", () => {
   expect.extend(toHaveNoViolations);

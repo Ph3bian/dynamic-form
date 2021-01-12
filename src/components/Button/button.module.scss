@@ -9,7 +9,8 @@ Button {
   padding: 0.5em 0.5em;
   line-height: 1.28rem;
   color: var(--light);
-  border-radius: 3px;
+  border-radius: 5px;
+  height: 2.5em;
   &:hover,
   &:active {
     color: var(--light);
@@ -23,6 +24,6 @@ Button {
   &.primary {
     border: var(--primary-color) 1px solid;
     background-color: var(--primary-color);
-    color: var(--base-color);
+    color: var(--light);
   }
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { Input } from "components";
 
 export default {
-  title: "Example/Input",
+  title: "Input",
   component: Input,
 };
 
@@ -13,6 +13,6 @@ Default.args = {
   label: "First Name",
   type: "text",
   name: "first_name",
-  onChange: null,
+  onChange: ()=>null,
   placeholder: "Enter first name",
 };

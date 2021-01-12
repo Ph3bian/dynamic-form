@@ -5,8 +5,8 @@ import styles from "./input.module.scss";
 const Input = ({ label, error, ...rest }) => (
   <div className={styles.Input}>
     <label>{label}</label>
-    <div>
-      <input {...rest} className={error ? styles.isErrorr : ""} />
+    <div className={styles.InputField}>
+      <input {...rest} className={error && "error"} />
       {error && (
         <div>
           <span className={styles.InputError}> {error}</span>

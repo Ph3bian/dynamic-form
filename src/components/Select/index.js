@@ -3,13 +3,14 @@ import styles from "./select.module.scss";
 const Select = ({ options, defaultValue, label, error, ...rest }) => {
   return (
     <div className={styles.Select} tabIndex={0}>
-      <label htmlFor={`listbox-${label}`}>{label}</label>
+      <label htmlFor={`select${label}`}>{label}</label>
       <div>
         <select
-          id={`listbox-${label}`}
+          id={`select${label}`}
           value={defaultValue}
           {...rest}
           data-testid={"TextSelect"}
+          className={error && "error"}
         >
           <option>Select {label}</option>
           {options &&

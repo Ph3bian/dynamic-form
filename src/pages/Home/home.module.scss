@@ -1,19 +1,29 @@
+@import "../../styles/variables.css";
 .Home {
-  padding: 2em 3em;
   font-family: "Raleway", sans-serif;
+  font-size: 1rem;
   .Form {
-    &Row {
-      margin-bottom: 2.5em;
-      &> div{
-        margin-bottom: .5em;
+    width: 30em;
+    &Header {
+      text-align: center;
+      color: var(--primary-color);
+      margin: auto auto 1.25em;
+      img {
+        width: 6em;
       }
     }
-    button{
-        margin-top: 1.5em;
+    &Row {
+      margin-bottom: 2.5em;
+      & > div {
+        margin-bottom: 0.5em;
+      }
     }
-    h2{
+    button {
+      margin-top: 1.5em;
+    }
+    h2 {
       text-transform: capitalize;
+      font-size: 1.3em;
     }
   }
-
 }
