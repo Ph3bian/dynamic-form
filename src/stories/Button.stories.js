@@ -4,16 +4,20 @@ import { Button } from "components";
 export default {
   title: "Button",
   component: Button,
+
+ 
 };
 
-export const PrimaryButton = () => (
-  <Button
-    onClick={() => alert("You clicked me")}
-    variant="primary"
-    text="Button"
-    type="button"
-  />
-);
+const Template = (args) => <Button {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  variant: "primary",
+  text: "Button",
+  type: "button",
+  onClick:()=>alert("You clicked me")
+};
+ 
 export const NeutralButton = () => (
   <Button
     onClick={() => alert("You clicked neutal button me")}
