@@ -1,8 +1,12 @@
+import { toaster } from "evergreen-ui";
 export const handleSubmit = (e, user, setErrors) => {
   e.preventDefault();
   const errors = isValid(user);
   setErrors(errors);
-  if (Object.keys(errors).length > 0) return;
+  if (Object.keys(errors).length > 0) {
+    toaster.warning("Fill all required fields");
+    return;
+  }
   const {
     first_name,
     last_name,
@@ -15,6 +19,7 @@ export const handleSubmit = (e, user, setErrors) => {
   console.log(
     `firstName: ${first_name},\nlastName:${last_name},\ncountry:${country},\nemail:${email},\nphoneNumber: ${phone_number},\npostCode:${post_code},\nstreetAddress: ${street_address}`
   );
+  toaster.success("Details Saved!");
 };
 
 export const handleChange = ({ target }, setUser) => {

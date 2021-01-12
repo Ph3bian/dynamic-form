@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useReducer } from "react";
 import styles from "./home.module.scss";
 import data from "./data.js";
+// import { Loading } from "assets/svg";
 import { UserReducer, DefaultUser } from "./user-reducer";
 import { Input, Button, Select, Layout } from "components";
 import { fetchData, handleSubmit, handleChange } from "./functions";
@@ -53,7 +54,7 @@ const Home = () => {
                 </div>
               </div>
             ))}
-          <Button type="submit" text="Submit" variant="primary"/>
+          <Button type="submit" text="Submit" variant="primary" />
         </form>
       </div>
     </Layout>

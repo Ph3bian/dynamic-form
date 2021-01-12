@@ -27,6 +27,7 @@
     border-radius: 3px;
     border: 1px solid var(--light-grey);
     font-size: 1em;
+
     width: 100%;
     &:active,
     &:focus {
@@ -34,7 +35,7 @@
       outline: none;
     }
     &.isError {
-      border-color: red;
+      border-color:   var(--danger);
     }
     @include md {
       width: 21.875em;
@@ -42,7 +43,7 @@
   
   }
   span {
-    color: red;
+    color:  var(--danger);
     font-size: 0.65em;
   }
 }
