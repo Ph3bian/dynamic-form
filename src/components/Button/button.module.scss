@@ -1,7 +1,7 @@
 @import "../../styles/variables.css";
 Button {
   width: 100%;
-  font-size: 1rem;
+  font-size: .85rem;
   cursor: pointer;
   transition: all 0.2s;
   touch-action: manipulation;
@@ -10,21 +10,19 @@ Button {
   line-height: 1.28rem;
   color: var(--light);
   border-radius: 3px;
-  background: var(--primary-color);
-  border: none;
   &:hover,
   &:active {
     color: var(--light);
-    background-color: transparentize(var(--primary-color), 0.1);
   }
   &.neutral {
     border: var(--light-grey) 1px solid;
-    background-color: var(--light-grey);
-    color: var(--primary-color);
+    background-color: transparent;
+    color: var(--grey);
   }
+
   &.primary {
     border: var(--primary-color) 1px solid;
     background-color: var(--primary-color);
-    color: var(--light);
+    color: var(--base-color);
   }
 }

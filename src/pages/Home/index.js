@@ -7,7 +7,7 @@ import { fetchData, handleSubmit, handleChange } from "./functions";
 const Home = () => {
   const [questions, setQuestions] = useState([]);
   const [user, setUser] = useReducer(UserReducer, DefaultUser);
-  const [errors, setErrors] = useState({});
+  const [errors, setError] = useState({});
 
   useEffect(() => {
     fetchData(setQuestions, data);
@@ -17,7 +17,7 @@ const Home = () => {
     <Layout>
       <div className={styles.Home}>
         <form
-          onSubmit={(e) => handleSubmit(e, user, setErrors)}
+          onSubmit={(e) => handleSubmit(e, user, setError)}
           className={styles.Form}
         >
           {questions &&
@@ -52,7 +52,7 @@ const Home = () => {
                 </div>
               </div>
             ))}
-          <Button type="submit" text="Submit" />
+          <Button type="submit" text="Submit" variant="primary"/>
         </form>
       </div>
     </Layout>

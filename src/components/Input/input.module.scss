@@ -17,7 +17,9 @@
     display: block;
     outline: none;
     @include md {
-    width: 9em;}
+      width: 9em;
+      height: 2em;
+    }
   }
   input {
     height: 2em;
@@ -25,7 +27,6 @@
     border-radius: 3px;
     border: 1px solid var(--light-grey);
     font-size: 1em;
-
     width: 100%;
     &:active,
     &:focus {
@@ -38,6 +39,7 @@
     @include md {
       width: 21.875em;
     }
+  
   }
   span {
     color: red;
