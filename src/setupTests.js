@@ -2,4 +2,13 @@
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
+const { configureAxe } = require("jest-axe");
+
+const axe = configureAxe({
+  rules: {
+    "aria-allowed-role": { enabled: false },
+  },
+});
+
+module.exports = axe;

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The <Select /> component Should render select correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="Select"
+    tabindex="0"
+  >
+    <label
+      for="listbox-Name"
+    >
+      Name
+    </label>
+    <select
+      data-testid="TextSelect"
+      id="listbox-Name"
+      name="firstName"
+    >
+      <option>
+        Select Name
+      </option>
+      <option
+        value="Phebian"
+      >
+        Phebian
+      </option>
+      <option
+        value="Anwuli"
+      >
+        Anwuli
+      </option>
+    </select>
+  </div>
+</DocumentFragment>
+`;

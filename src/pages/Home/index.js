@@ -35,6 +35,7 @@ const Home = () => {
                         options={options}
                         onChange={(e) => handleChange(e, setUser)}
                         error={errors[name]}
+                        placeholder={`Enter ${label.toLowerCase()}`}
                       />
                     ) : (
                       <Input

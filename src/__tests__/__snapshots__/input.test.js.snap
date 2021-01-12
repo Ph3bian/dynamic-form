@@ -8,11 +8,14 @@ exports[`The <Input /> component Should render input correctly 1`] = `
     <label>
       First Name
     </label>
-    <input
-      name="firstName"
-      placeholder="Enter first name"
-      type="text"
-    />
+    <div>
+      <input
+        class=""
+        name="firstName"
+        placeholder="Enter first name"
+        type="text"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;

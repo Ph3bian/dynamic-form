@@ -3,7 +3,7 @@
 exports[`The <Button/> component Should render button correctly 1`] = `
 <DocumentFragment>
   <button
-    class=" "
+    class="Button "
     type="button"
   >
     Submit

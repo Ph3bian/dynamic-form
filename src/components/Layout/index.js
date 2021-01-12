@@ -6,7 +6,7 @@ export const Layout = ({ children }) => (
  
   <div className={styles.Layout}>
     <div className={styles.LayoutBg}>
-      <h2>Welcome</h2>
+      <h1>Welcome</h1>
       <Italy />
     </div>
     <div className={styles.LayoutContent}> {children}</div>
