@@ -1,10 +1,14 @@
 @import "../../styles/variables.css";
+@import "../../styles/breakpoint";
 .Home {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   padding: 2em 3em;
   .Form {
-    width: 30em;
+    width: 100%;
+    @include md {
+      width: 30em;
+    }
     &Header {
       text-align: center;
       color: var(--primary-color);
