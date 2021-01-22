@@ -1,4 +1,5 @@
 import { toaster } from "evergreen-ui";
+
 export const handleSubmit = (e, user, setErrors, setUser, DefaultUser) => {
   e.preventDefault();
   const errors = isValid(user);
